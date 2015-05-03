@@ -1,0 +1,37 @@
+{% extends 'layout' %}
+
+{% block content %}
+<div class="col-md-10 page-content wiki">
+    <div class="col-md-3 page-sidebar">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a class="edit" href="https://github.com/jphp-compiler/jphp/wiki/_Sidebar/_edit"><i class="fa fa-pencil-square-o"></i> Edit</a>
+                Menu
+            </div>
+            <div class="panel-body">
+                {{ sidebar | raw }}
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8" role="main">
+        <h1 class="title">
+            {% if source == null %}
+                <a class="edit" href="https://github.com/jphp-compiler/jphp/wiki/{{ path }}"><i class="fa fa-pencil-square-o"></i> Edit</a>
+            {% else %}
+                <a class="edit" href="https://github.com/jphp-compiler/jphp/wiki/{{ path }}/_edit"><i class="fa fa-pencil-square-o"></i> Edit</a>
+            {% endif %}
+
+            {{ title }}
+        </h1>
+        <hr>
+
+        {% if not (source == null) %}
+            {{ source | raw }}
+        {% else %}
+            <h3><i class="fa fa-wrench"></i> Under construction...</h3>
+        {% endif %}
+    </div>
+
+    <div style="clear: both"></div>
+</div>
+{% endblock %}

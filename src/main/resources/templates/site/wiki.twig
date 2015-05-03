@@ -1,0 +1,24 @@
+{% extends 'layout' %}
+
+{% block content %}
+<div class="col-md-9 page-content wiki">
+    <h1 class="title">
+        {% if source == null %}
+            <a class="edit" href="https://github.com/jphp-compiler/jphp/wiki/{{ path }}"><i class="fa fa-pencil-square-o"></i> Edit</a>
+        {% else %}
+            <a class="edit" href="https://github.com/jphp-compiler/jphp/wiki/{{ path }}/_edit"><i class="fa fa-pencil-square-o"></i> Edit</a>
+        {% endif %}
+
+        {{ title }}
+    </h1>
+    <hr>
+
+    {% if not (source == null) %}
+        {{ source | raw }}
+    {% else %}
+        <h3><i class="fa fa-wrench"></i> Under construction...</h3>
+    {% endif %}
+
+    <div style="clear: both"></div>
+</div>
+{% endblock %}

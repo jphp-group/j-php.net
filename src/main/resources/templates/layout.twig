@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>JPHP - an alternative to PHP</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- script references -->
+
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/obsidian.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+    <link href="/css/styles.css" rel="stylesheet">
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/scripts.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top navbar-bold" data-spy="affix" data-offset-top="1000">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="/" class="navbar-brand">Home</a>
+            <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+        </div>
+        <div class="pull-right" style="padding-top: 10px">
+            <a aria-label="Star jphp-compiler/jphp on GitHub" data-count-aria-label="# stargazers on GitHub" data-count-api="/repos/jphp-compiler/jphp#stargazers_count" data-count-href="/jphp-compiler/jphp/stargazers" data-style="mega" href="https://github.com/jphp-compiler/jphp" class="github-button">Star</a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+            <ul class="nav navbar-nav">
+                <li class="{{ currPage == 'getstarted' ? 'active' : '' }}"><a href="/wiki/Getting-started">Get Started</a></li>
+                <li class="{{ currPage == 'documentation' ? 'active' : '' }}"><a href="/documentation/">Documentation</a></li>
+                <li class="{{ currPage == 'download' ? 'active' : '' }}"><a href="/download/">Download</a></li>
+                <li class="{{ currPage == 'faq' ? 'active' : '' }}"><a href="/faq/">F.A.Q.</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% block headerContent %}
+<div class="header vert header-sm">
+    <div class="container">
+        <h1>JPHP</h1>
+        <p class="lead">An alternative to PHP <small>on the JVM</small></p>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %} {% endblock %}
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <p>JPHP Group ©2015</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<ul class="nav pull-right scroll-down">
+    <li><a href="#" title="Scroll down"><i class="icon-chevron-down icon-3x"></i></a></li>
+</ul>
+<ul class="nav pull-right scroll-top">
+    <li><a href="#" title="Scroll to top"><i class="icon-chevron-up icon-3x"></i></a></li>
+</ul>
+
+<!-- Place this tag right after the last button or just before your close body tag. -->
+<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+</body>
+</html>

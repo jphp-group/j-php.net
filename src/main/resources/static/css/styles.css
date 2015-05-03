@@ -1,0 +1,335 @@
+/* -- custom css for Bootstrap 3.x --*/
+
+/* move special fonts to HTML head for better performance */
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600');
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* fix bs3 horizontal scrollbar bug */
+.row { margin: 0; padding: 0 }
+
+ul, ol {
+    margin-left: 0px;
+    padding-left: 15px;
+    list-style: square;
+}
+
+h1 {
+  font-size:45px; 
+}
+
+img.grayscale {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+}
+
+.icon-bar {
+   background-color:#fff;
+}
+
+.scroll-down a, .scroll-top a {
+   color:#ffffff;
+}
+
+.scroll-down {
+   position:fixed;
+   bottom:20%;
+   right:0%;
+   color:#f9f9f9;
+}
+
+.header .sampler {
+    float: right;
+    width: 420px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.header .sampler ul {
+    position: absolute;
+    width: 200px;
+    left: -200px;
+    top: 30px;
+    text-align: right;
+    list-style: none;
+}
+
+.header .sampler ul li {
+    background: #282b2e;
+    padding: 5px 0;
+    margin: 3px 0;
+    padding-right: 20px;
+    color: silver;
+    margin-left: 20px;
+    cursor: pointer;
+
+    border-radius: 4px 0px 0 4px;
+
+    transition: margin-left 0.4s ease-out;
+}
+
+.header .sampler ul li:hover {
+    color: white;
+}
+
+.header .sampler ul .selected {
+    background: #385171;
+    color: white;
+    margin-left: 0;
+}
+
+.header pre {
+    background: #282b2e;
+    padding: 0;
+    border: 1px solid white;
+    box-shadow: 0 0 10px white;
+}
+
+.header pre code {
+    padding: 15px;
+}
+
+.header .btn-lg {
+   font-size: 28px;
+   border-color:#eeeeee;
+   padding:15px;
+   color: #245269;
+}
+
+.header .btn-lg .fa {
+    margin-right: 5px;
+}
+
+.header .btn-lg:hover {
+   background-color:#eeeeee;
+   color: #777777;
+}
+
+.navbar a {
+  color:#fff;
+}
+
+.navbar-bold {
+  background-color: #393939;
+  box-shadow: 0 0 10px white;
+    border-bottom: 1px solid white;
+}
+
+.navbar-bold li a:hover, .navbar-bold li.active {
+  background-color:  #436188;
+}
+
+.vert {
+  vertical-align: middle;
+  width:100%;
+  padding-top: 60px;
+}
+
+.header h1 {
+  font-size: 80px;
+  -webkit-text-stroke: 1px rgba(0,0,0,0.1);
+  color:#431a6d;
+  color:#fff;
+  margin-left:-5px;
+  margin-bottom:5px;
+}
+
+.header.header-sm .lead {
+    font-size: 15px;
+}
+
+.header.header-sm h1 {
+    font-size: 40px;
+}
+
+.header .lead {
+  color:#eeeeee;
+  font-size:25px;
+}
+
+.header.header-sm {
+  height: 180px;
+}
+
+.header {
+  height: 365px;
+  min-width: 800px;
+  background: #436188;
+}
+
+.blurb {
+  padding: 120px 0;
+  background-color:#fefefe;
+}
+
+.blurb .panel {
+  background-color:transparent;
+}
+
+.bright {
+  background: #7fbbda no-repeat center center fixed;
+  color:#fff;
+}
+
+.featurette {
+  background: #454546;
+  padding: 50px 0;
+  color: #ffffff;
+}
+
+.featurette-item {
+  margin-bottom: 15px;
+}
+
+.featurette-item > i {
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 56px;
+  width: 140px;
+  height: 140px;
+  line-height: 136px;
+  vertical-align: middle; 
+  text-align: center;
+}
+
+.featurette-item > i:hover {
+  font-size: 68px;
+}
+
+.callout {
+  color: #ffffff;
+  padding-top:7%;
+  height: 100%;
+  width: 100%;
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.gallery {
+  padding: 50px 0;
+}
+
+.call-to-action {
+  background: #eeeeee;
+  padding: 50px 0;
+}
+
+.call-to-action .btn {
+  margin: 10px;
+}
+
+footer {
+  padding: 100px 0;
+}
+
+.page-content {
+    float: none;
+    margin: 0 auto;
+    margin-top: 20px;
+    line-height: 22px;
+}
+
+.page-content .page-sidebar {
+    margin-right: 10px;
+    z-index: 100;
+}
+
+.page-content .page-sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.page-content .page-sidebar ul li:hover {
+    position: relative;
+    cursor:pointer;
+}
+
+.page-content .page-sidebar ul li a {
+    padding: 5px 15px;
+    display:inline-block;
+    text-decoration:none;
+}
+
+.page-content .page-sidebar ul li ul {
+    position:absolute;
+    display:none;
+    background: #282b2e;
+    border-radius: 5px;
+    box-shadow: 0 0 10px white;
+    border: 1px solid white;
+}
+
+.page-content .page-sidebar ul li:hover ul{
+    left:100px;
+    top: 0px;
+    display:block;
+}
+
+.page-content .page-sidebar ul li ul li a{
+    color: white;
+    display:inline-block;
+    width: 200px;
+}
+
+.page-content .page-sidebar ul li ul li a:hover {
+    color: #ffff00;
+}
+
+.page-content .page-sidebar ul li:hover ul li ul{
+    position:absolute;
+    display:none;
+}
+
+/* We show the third level menu only when they hover the second level menu parent */
+.page-content .page-sidebar ul li:hover ul li:hover ul{
+    display:block;
+    left:150px;
+    top:0;
+}
+
+
+.page-content h1.title {
+    margin-top: 0;
+}
+
+.page-content h3 {
+    color: gray;
+}
+
+.wiki pre {
+    background: #282b2e;
+    padding: 10px;
+    border: 0;
+}
+
+.wiki a.edit {
+    font-size: 14px;
+    float: right;
+}
+
+.wiki h3 a, .wiki h2 a, .wiki h1 a {
+    color: #282b2e;
+}
+
+.wiki h3 a:hover, .wiki h2 a:hover, .wiki h1 a:hover { text-decoration: none; }
+
+blockquote {
+    color: #777;
+}
+
+code {
+    color: #686868;
+    background: #ececec;
+}
+
+/* -- end custom css for Bootstrap 3.x --*/

@@ -1,0 +1,80 @@
+<pre style="display: none"><code class="lang-php target-gui-app" style="display: none">$form = new UIForm();
+$form->size  = [600, 300];
+$form->title = 'My Program';
+
+$button = new UIButton();
+$button->text = 'Click Me';
+$button->on('click', function(MouseEvent $e) {
+        UIDialog::message('Hello World');
+});
+
+$form->add($button);
+$form->show();
+</code></pre>
+
+<pre style="display: none"><code class="lang-php target-new-elegant-api">String::shuffle($str); // New API for primitive types
+
+// API for Streams instead of fopen, fclose, etc.
+Stream::getContents('path/to/file');
+
+// API for regex instead of preg_*
+$valid = Regex::match('^[a-z]+$', $str);
+
+// Flow API for iterators and arrays
+echo Flow::of([1, 2, 3])
+     ->map(function($num) { return $num * 10; })
+     ->reduce(function($res, $num) { $res += $num; });
+</code></pre>
+<pre style="display: none"><code class="lang-php target-web-server">$server = new WebServer();
+
+$server->setIsolated(true);
+$server->setHotReload(true);
+
+// set the route callback for http requests
+$server->setRoute(function($request, $response) {
+    echo "Hello World!";
+});
+
+// finally run at localhost:8080
+$server->run();
+</code></pre>
+<pre style="display: none"><code class="lang-php target-multi-threading">$thread = new Thread(function () {
+    $i = 0;
+
+    while (true) {
+         $i++;
+         echo $i, "\n";
+
+         sleep(2); // every 2 seconds
+    }
+});
+
+$thread->start(); // start thread
+</code></pre>
+<pre style="display: none"><code class="lang-php target-unicode-strings">// Unicode like in Java, UTF-16
+
+// Programing language
+$str = "プログラミング言語";
+
+// Get length of the unicode string
+echo String::length($str);
+
+// Change symbol by index
+$str[1] = '語';
+
+echo $str;
+</code></pre>
+
+<pre><code class="lang-php display">$server = new WebServer();
+
+$server->setIsolated(true);
+$server->setHotReload(true);
+
+// set the route callback for http requests
+$server->setRoute(function($request, $response) {
+    echo "Hello World!";
+});
+
+// finally run at localhost:8080
+$server->run();
+</code></pre>

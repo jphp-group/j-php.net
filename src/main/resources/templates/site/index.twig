@@ -1,0 +1,81 @@
+{% extends 'layout' %}
+
+{% block headerContent %}
+<div class="header vert">
+    <div class="container">
+
+        <div class="sampler">
+            <ul>
+                <li class="selected" data-target="web-server">Web Server</li>
+                <li data-target="gui-app">GUI Application</li>
+                <li data-target="multi-threading">Multi-threading</li>
+                <li data-target="unicode-strings">Unicode Strings</li>
+                <li data-target="new-elegant-api">New API</li>
+            </ul>
+
+            {% include 'blocks/_indexHeadSources' %}
+        </div>
+
+        <h1>JPHP</h1>
+        <p class="lead">An alternative to PHP <small>on the JVM</small></p>
+        <div>&nbsp;</div>
+        <a href="/wiki/Getting-started" class="btn btn-default btn-lg"><i class="fa fa-arrow-right"></i> Get Started</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+    <div class="blurb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1>PHP on the Java VM</h1>
+                    <p class="lead">
+                        JIT, Multi-Threading, Unicode, GUI, Android and Embedded Web Applications.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="featurette">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1>Amazing Features</h1>
+                </div>
+            </div>
+            <div>&#160;</div>
+            <div class="row">
+                <div class="col-md-2 col-md-offset-2 text-center">
+                    <div class="featurette-item">
+                        <i class="fa fa-rocket"></i>
+                        <h4>High Performance</h4>
+                        <p>JIT + Optimizer = 1x - 10x faster PHP 5.6</p>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="featurette-item">
+                        <i class="fa fa-diamond"></i>
+                        <h4>New API</h4>
+                        <p>A better std library, more elegant and powerful.</p>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="featurette-item">
+                        <i class="fa fa-cogs"></i>
+                        <h4>GUI, Game, Android</h4>
+                        <p>Use the php language not only for web apps.</p>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="featurette-item">
+                        <i class="fa fa-globe"></i>
+                        <h4>Web Apps</h4>
+                        <p>Develop RIA modern web applications with JPHP</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
