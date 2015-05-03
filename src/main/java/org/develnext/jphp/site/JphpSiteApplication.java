@@ -33,7 +33,7 @@ public class JphpSiteApplication {
     @Bean
     public ViewResolver viewResolver() {
         PebbleViewResolver viewResolver = new PebbleViewResolver();
-        viewResolver.setPrefix("\\templates\\");
+        viewResolver.setPrefix("/templates/");
         viewResolver.setSuffix(".twig");
         viewResolver.setPebbleEngine(pebbleEngine());
 
