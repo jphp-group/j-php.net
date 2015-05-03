@@ -117,7 +117,6 @@ img.grayscale {
 
 .navbar-bold {
   background-color: #393939;
-  box-shadow: 0 0 10px white;
     border-bottom: 1px solid white;
 }
 
@@ -154,7 +153,7 @@ img.grayscale {
 }
 
 .header.header-sm {
-  height: 180px;
+  height: 182px;
 }
 
 .header {
