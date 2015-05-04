@@ -1,0 +1,7 @@
+if [ ! -f application.pid ]; then
+   echo "Server is not running... ";
+   exit 0
+fi
+
+PID=$(cat application.pid)
+kill $PID

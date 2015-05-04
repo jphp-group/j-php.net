@@ -1,0 +1,9 @@
+git checkout -- .
+git pull origin master
+
+chmod +x gradlew
+chmod +x start
+chmod +x stop
+
+./stop
+./start
