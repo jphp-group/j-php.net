@@ -20,7 +20,7 @@ public class GithubWikiResolver {
 
     private static Cache<String, String> cache = CacheBuilder.newBuilder()
             .maximumSize(5000)
-            .expireAfterWrite(15, TimeUnit.MINUTES)
+            .expireAfterWrite(60, TimeUnit.MINUTES)
             .build();
 
     private LinkRenderer linkRenderer = new LinkRenderer() {
