@@ -36,10 +36,15 @@ sourceSets {
     test.resources.srcDirs = ["src/main/tests"]
 }
 
+configurations {
+    compile.exclude module: "spring-boot-starter-tomcat"
+}
+
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-mail")
     compile("org.springframework.boot:spring-boot-starter-mobile")
     compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-jetty")
     compile("org.springframework.boot:spring-boot-starter-websocket")
 
     compile("com.mitchellbosecke:pebble-spring3:1.4.5")
