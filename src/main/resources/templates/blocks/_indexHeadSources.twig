@@ -66,15 +66,16 @@ $str[1] = '語';
 echo $str;
 </code></pre>
 
-<pre><code class="lang-php display">$server = new WebServer();
-
-$server->setIsolated(true);
-$server->setHotReload(true);
-
-// set the route callback for http requests
-$server->setRoute(function($request, $response) {
+<pre><code class="lang-php display">// set the route callback for http requests
+$server = new WebServer(function($request, $response) {
     echo "Hello World!";
 });
+
+// Each request will be executed in an isolated environment
+$server->isolated = true;
+
+// Hot Reload like in PHP (F5 mode)
+$server->hotReload = true;
 
 // finally run at localhost:8080
 $server->run();
