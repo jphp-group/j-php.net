@@ -25,15 +25,16 @@ echo Flow::of([1, 2, 3])
      ->map(function($num) { return $num * 10; })
      ->reduce(function($res, $num) { $res += $num; });
 </code></pre>
-<pre style="display: none"><code class="lang-php target-web-server">$server = new WebServer();
-
-$server->setIsolated(true);
-$server->setHotReload(true);
-
-// set the route callback for http requests
-$server->setRoute(function($request, $response) {
+<pre style="display: none"><code class="lang-php target-web-server">// set the route callback for http requests
+$server = new WebServer(function($request, $response) {
     echo "Hello World!";
 });
+
+// Each request will be executed in an isolated environment
+$server->isolated = true;
+
+// Hot Reload like in PHP (F5 mode)
+$server->hotReload = true;
 
 // finally run at localhost:8080
 $server->run();
