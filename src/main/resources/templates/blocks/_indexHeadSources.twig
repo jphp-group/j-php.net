@@ -25,8 +25,7 @@ echo Flow::of([1, 2, 3])
      ->map(function($num) { return $num * 10; })
      ->reduce(function($res, $num) { $res += $num; });
 </code></pre>
-<pre style="display: none"><code class="lang-php target-web-server">// set the route callback for http requests
-$server = new WebServer(function($request, $response) {
+<pre style="display: none"><code class="lang-php target-web-server">$server = new WebServer(function($req, $res) {
     echo "Hello World!";
 });
 
@@ -66,8 +65,7 @@ $str[1] = '語';
 echo $str;
 </code></pre>
 
-<pre><code class="lang-php display">// set the route callback for http requests
-$server = new WebServer(function($request, $response) {
+<pre><code class="lang-php display">$server = new WebServer(function($req, $res) {
     echo "Hello World!";
 });
 
