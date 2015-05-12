@@ -22,8 +22,8 @@ $valid = Regex::match('^[a-z]+$', $str);
 
 // Flow API for iterators and arrays
 echo Flow::of([1, 2, 3])
-     ->map(function($num) { return $num * 10; })
-     ->reduce(function($res, $num) { $res += $num; });
+     ->map(function($n) { return $n * 10; })
+     ->reduce(function(&$r, $n) { $r += $n; });
 </code></pre>
 <pre style="display: none"><code class="lang-php target-web-server">$server = new WebServer(function($req, $res) {
     echo "Hello World!";
