@@ -15,6 +15,12 @@ public class SiteController {
         vars.put("currPage", "index");
         return "site/index";
     }
+    
+    @RequestMapping("donate/")
+    public String donate(ModelMap vars) {
+        vars.put("currPage", "donate");
+        return "site/donate";
+    }
 
     @RequestMapping("documentation/")
     public String documentation(ModelMap vars) {
