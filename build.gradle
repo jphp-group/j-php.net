@@ -21,6 +21,9 @@ jar {
     baseName = 'jphp-site'
     version = '0.0.1-SNAPSHOT'
 }
+
+applicationDefaultJvmArgs = ["-Dfile.encoding=utf-8", "-Xmx256m", "-XX:+UseCompressedOops"]
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 

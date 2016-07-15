@@ -1,5 +1,7 @@
 chmod +x gradlew
 
-nohup ./gradlew bootRun > application.log 2> application.errors.log < /dev/null &
+./gradlew installDist
+
+nohup ./build/install/j-php.net/bin/j-php.net > application.log 2> application.errors.log < /dev/null &
 PID=$!
 echo $PID > application.pid
